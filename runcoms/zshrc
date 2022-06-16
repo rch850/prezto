@@ -33,3 +33,7 @@ function g() {
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# Load Angular CLI autocompletion.
+command -v ng &> /dev/null && source <(ng completion script)
+
