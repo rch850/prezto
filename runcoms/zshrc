@@ -31,8 +31,13 @@ function g() {
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.zprezto/p10k.zsh ]] || source ~/.zprezto/p10k.zsh
 
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# asdf-vm
+# https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
+if [[ -f "$HOME/.asdf/asdf.sh" ]]; then
+  . "$HOME/.asdf/asdf.sh"
+elif [[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]]; then
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
 
 # Load Angular CLI autocompletion.
 command -v ng &> /dev/null && source <(ng completion script)
