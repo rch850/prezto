@@ -38,6 +38,3 @@ function g() {
 # ~/.local/bin/mise did not found since mise is installed by Homebrew.
 eval "$(mise activate zsh)"
 
-# Load Angular CLI autocompletion.
-command -v ng &> /dev/null && source <(ng completion script)
-
