@@ -38,3 +38,5 @@ function g() {
 # ~/.local/bin/mise did not found since mise is installed by Homebrew.
 eval "$(mise activate zsh)"
 
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
